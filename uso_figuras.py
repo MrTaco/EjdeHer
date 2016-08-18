@@ -1,26 +1,30 @@
 from cuadrado import Cuadrado
 from triangulo import Triangulo
-print("1)Crear Figura \n2)Salir")
-opcion=int(input(" :"))
-x=False
-if opcion==1:
-	x=True:
-while x=True:
-	if opcion==1:
-		opcfigura=input("Ingrese Figura (c-Cuadrado, t-triangulo: ")
-		if opcfigura==c:
-			valorlado=int(input("Ingrese Lado: "))
-		else:
-			valoraltura=int(input("Ingrese Altura: "))
-			valorbase=int(input("Ingrese Base: "))
-	if opcion==2: 
-		if opcfigura==c:
-			print (valorlado.imprimir())
-		else:
-			print 
 
-print ("Area: ", mi_cuadrado_1.calcular_area())
-print (mi_cuadrado_1.imprimir())
-
-print ("Area: ", mi_cuadrado_2.calcular_area())
-print (mi_cuadrado_2.imprimir())
+continuar = False
+while continuar == False:
+	opc = int(input("1. Crear Figura \n 2. Salir "))
+	if opc == 1:
+		figura = int(input("1. Cuadrado \n 2. Triangulo "))
+		if figura == 1:
+			lado = int(input("Lado: "))
+			cuadrado = Cuadrado(lado)
+			opc2 = int(input("1. Calcular el area \n 2. Imprimir figura "))
+			if opc2 == 1:
+				print ("Area: ", cuadrado.calcular_area())
+			elif opc2 == 2:
+				print ("Figura: " )
+				print(cuadrado.imprimir())
+		if figura == 2:
+			base = int(input("Base: "))
+			altura = int(input("Altura: "))
+			triangulo = Triangulo(base,altura)
+			opc2 = int(input("1. Calcular el area \n 2. Imprimir figura "))
+			if opc2 == 1:
+				print ("Area: ", triangulo.calcular_area())
+			elif opc2 == 2:
+				print ("Figura:" )
+				print(triangulo.imprimir())
+	else: 
+		continuar = True
+print("Prceso Terminado")
